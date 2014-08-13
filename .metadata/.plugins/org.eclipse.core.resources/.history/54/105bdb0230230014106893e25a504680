@@ -19,14 +19,6 @@ public class MainFrame extends JFrame {
 		
 		setLayout(new BorderLayout());
 		
-		getBtn().addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				getTextArea().append("Hello\n");
-			}
-		});
-		
 		add(getTextArea(), BorderLayout.CENTER);
 		add(getBtn(), BorderLayout.SOUTH);
 		

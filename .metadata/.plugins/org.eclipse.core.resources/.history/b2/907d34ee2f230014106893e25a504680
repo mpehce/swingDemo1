@@ -23,7 +23,7 @@ public class MainFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getTextArea().append("Hello\n");
+				getTextArea().setText("The button has been clicked");
 			}
 		});
 		
