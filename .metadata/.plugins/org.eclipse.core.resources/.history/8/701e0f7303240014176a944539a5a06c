@@ -9,6 +9,7 @@ import javax.swing.JTextArea;
 
 public class MainFrame extends JFrame {
 	
+	private JButton btn;
 	private TextPanel textPanel;
 	private Toolbar toolbar;
 	
@@ -19,12 +20,28 @@ public class MainFrame extends JFrame {
 		
 		setLayout(new BorderLayout());
 		
-		getToolbar().setTextPanel(getTextPanel());
+		getBtn().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getTextPanel().appendText("Hello\n");
+			}
+		});
+		
+		getToolbar().setTextPanel(textPanel);
 		
 		add(getToolbar(), BorderLayout.NORTH);
 		add(getTextPanel(), BorderLayout.CENTER);
+		add(getBtn(), BorderLayout.SOUTH);
 		
 		setVisible(true);
+	}
+
+	public JButton getBtn() {
+		if (btn == null) {
+			btn = new JButton("Click me");
+		}
+		return btn;
 	}
 
 	public TextPanel getTextPanel() {

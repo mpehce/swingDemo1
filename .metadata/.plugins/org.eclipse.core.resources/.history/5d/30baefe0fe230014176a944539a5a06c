@@ -1,0 +1,30 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+
+public class Toolbar extends JPanel {
+
+	private JButton helloButton;
+	private JButton goodbyeButton;
+	
+	public Toolbar() {
+		setLayout(new FlowLayout());
+		
+	}
+
+	public JButton getHelloButton() {
+		if (helloButton == null) {
+			helloButton = new JButton("Hello");
+		}
+		return helloButton;
+	}
+
+	public JButton getGoodbyeButton() {
+		if (goodbyeButton == null) {
+			goodbyeButton = new JButton("Goodbye");
+		}
+		return goodbyeButton;
+	}
+}
