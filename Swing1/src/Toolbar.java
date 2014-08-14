@@ -11,7 +11,7 @@ public class Toolbar extends JPanel implements ActionListener{
 	private JButton helloButton;
 	private JButton goodbyeButton;
 	
-	private TextPanel textPanel;
+	private TextPanel textPanel; //use interface instead of textPanel to avoid tight coupling
 	
 	public Toolbar() {
 		setLayout(new FlowLayout(FlowLayout.LEFT));
