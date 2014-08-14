@@ -23,11 +23,11 @@ public class MainFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getTextPanel().appendText("Hello\n");
+				getTextArea().append("Hello\n");
 			}
 		});
 		
-		add(getTextPanel(), BorderLayout.CENTER);
+		add(getTextArea(), BorderLayout.CENTER);
 		add(getBtn(), BorderLayout.SOUTH);
 		
 		setVisible(true);

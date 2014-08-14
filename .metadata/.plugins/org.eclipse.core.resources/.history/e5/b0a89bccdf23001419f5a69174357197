@@ -10,7 +10,7 @@ import javax.swing.JTextArea;
 public class MainFrame extends JFrame {
 	
 	private JButton btn;
-	private TextPanel textPanel;
+	private JTextArea textArea;
 	
 	public MainFrame() {
 		super("Hello world");
@@ -23,11 +23,11 @@ public class MainFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getTextPanel().appendText("Hello\n");
+				getTextArea().append("Hello\n");
 			}
 		});
 		
-		add(getTextPanel(), BorderLayout.CENTER);
+		add(getTextArea(), BorderLayout.CENTER);
 		add(getBtn(), BorderLayout.SOUTH);
 		
 		setVisible(true);
@@ -40,10 +40,10 @@ public class MainFrame extends JFrame {
 		return btn;
 	}
 
-	public TextPanel getTextPanel() {
-		if (textPanel == null) {
-			textPanel = new TextPanel();
+	public JTextArea getTextArea() {
+		if (textArea == null) {
+			textArea = new JTextArea();
 		}
-		return textPanel;
+		return textArea;
 	}
 }
